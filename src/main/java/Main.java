@@ -23,7 +23,7 @@ class Main {
           System.out.println("2. zakoncz dodawanie");
           int option=scanner.nextInt();
           switch(option)
-            {
+           {
               case 1:
                 System.out.println("Podaj imie studenta");
                 String name=scanner.next();
@@ -37,15 +37,14 @@ class Main {
               default:
                 System.out.println("Niepoprawna opcja. Wybierz ponownie");
                 break;
-            }
-          
+           }
         }
       var students = s.getStudents();
       for(Student current : students) {
         System.out.println(current.ToString());
       }
-    } catch (IOException e) {
-
+    } catch (IOException e){
+      e.printStackTrace();
     }
   }
 }
