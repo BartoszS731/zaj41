@@ -40,12 +40,9 @@ class Main {
             }
           
         }
-      var students = s.getStudents();
-      for(Student current : students) {
-        System.out.println(current.ToString());
-      }
+      
     } catch (IOException e) {
-
+      e.printStackTrace();
     }
   }
 }
