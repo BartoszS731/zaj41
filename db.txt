@@ -1,8 +1,2 @@
-Krzysztof 20
-Janusz 40
-Krzysztof 20
-Janusz 40
-Krzyszof 20
-Janusz 40
-Krzyszttof 20
-Janusz 40
+bartek 34
+mati 25
