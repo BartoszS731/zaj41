@@ -7,6 +7,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 public class Service {
 
+  private static final String FILENAME = "db.txt";
   public void addStudent(Student student) throws IOException {
     var f = new FileWriter("db.txt", true);
     var b = new BufferedWriter(f);

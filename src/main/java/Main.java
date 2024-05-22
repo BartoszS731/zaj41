@@ -27,9 +27,11 @@ class Main {
               case 1:
                 System.out.println("Podaj imie studenta");
                 String name=scanner.next();
+               System.out.println("Podaj nazwisko studenta");
+                String surname=scanner.next();
                 System.out.println("Podaj wiek studenta");
                 int age=scanner.nextInt();
-                s.addStudent(new Student(name, age));
+                s.addStudent(new Student(name, surname, age));
                 break;
               case 2:
                 addingStudent=false;
