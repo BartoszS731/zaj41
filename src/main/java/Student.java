@@ -1,28 +1,30 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 public class Student {
 
   private String Name;
-  private int Age;
   private String Surname;
-  public Student(String name,String surname, int age)
+  private LocalDate BirthDate;
+  public Student(String name,String surname, LocalDate birthDate)
   {
     Name = name;
     Surname = surname;
-    Age = age;
+    BirthDate = birthDate;
   }
 
   public String GetName() {return Name;}
   public String GetSurname() {return Surname;}
-  public int GetAge() {return Age;}
+  public LocalDate GetBirthDate() {return BirthDate;}
 
   public String ToString() {
-    return Name + " " + Surname + " "+Integer.toString(Age);
+    return Name + " " + Surname + " "+ BirthDate.format(DateTimeFormatter.ofPattern("dd MM YYYY"));
   }
 
 
   public static Student Parse(String str) {
     String[] data = str.split(" ");
-    if(data.length != 3) 
-      return new Student("Parse", "Error", -1);
-    return new Student(data[0], data[1], Integer.parseInt(data[2]));
+    if(data.length != 4) 
+      return new Student("Parse","Error", LocalDate.now());
+    return new Student(data[0], data[1], LocalDate.of(Integer.parseInt(data[3]), Integer.parseInt(data[2]), Integer.parseInt(data[1])));
   }
 }
